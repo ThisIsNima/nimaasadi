@@ -46,24 +46,44 @@ Chart.Bar('chart_0', {
   data: data
 });
 
-var ctx = document.getElementById("chart_1").getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
-    datasets: [{
-      backgroundColor: [
-        "#2ecc71",
-        "#3498db",
-        "#95a5a6",
-        "#9b59b6",
-        "#f1c40f",
-        "#e74c3c",
-        "#34495e"
-      ],
-      data: [12, 19, 3, 17, 28, 24, 7]
-    }]
-  }
-});
+var option1 = {
+    //Boolean - Whether we should show a stroke on each segment
+    segmentShowStroke : true,
 
+    //String - The colour of each segment stroke
+    segmentStrokeColor : "#fff",
+
+    //Number - The width of each segment stroke
+    segmentStrokeWidth : 2,
+
+    //Number - The percentage of the chart that we cut out of the middle
+    percentageInnerCutout : 0, // This is 0 for Pie charts
+
+    //Number - Amount of animation steps
+    animationSteps : 100,
+
+    //String - Animation easing effect
+    animationEasing : "easeOutBounce",
+
+    //Boolean - Whether we animate the rotation of the Doughnut
+    animateRotate : true,
+
+    //Boolean - Whether we animate scaling the Doughnut from the centre
+    animateScale : false,
+		legend: {
+            display: true
+            
+        },
+   
+    //String - A legend template
+    
+                tooltipTemplate:  '<'+'%'+'= label %> - <'+'%'+'= value %>%'
+
+};
+
+
+Chart.Pie('chart_1', {
+  options: option1,
+  data: data
+});
 </script>
