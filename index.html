@@ -4,7 +4,7 @@
 
 
 <canvas id="chart_0" height="300vw" width="100vw"></canvas>
-
+<canvas id="chart_1" height="300vw" width="100vw" margin-left="400vw"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 
@@ -44,12 +44,10 @@ var option = {
 Chart.Bar('chart_0', {
   options: option,
   data: data
-})
-  Chart.Pie('chart_0', {
+});
+  Chart.Pie('chart_1', {
   options: option,
   data: data
-})
-  
-  ;
+});
 
 </script>
