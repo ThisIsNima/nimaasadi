@@ -5,18 +5,11 @@
 <canvas id="myChart"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
-<style>
-    #myChart{
-    width:100px;
-    height:100px;
-    }
-</style>
-
 
 <script>
-var canvas = document.getElementsByID("myChart")[0];
-canvas.width  = 100;
-canvas.height = 100;
+var mycanvas = document.getElementsByID("myChart")[0];
+mycanvas.width  = 100;
+mycanvas.height = 100;
 
 var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
